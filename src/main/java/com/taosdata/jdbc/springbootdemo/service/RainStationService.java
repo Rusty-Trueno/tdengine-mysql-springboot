@@ -1,8 +1,8 @@
 package com.taosdata.jdbc.springbootdemo.service;
 
-import com.taosdata.jdbc.springbootdemo.dao.DatabaseMapper;
-import com.taosdata.jdbc.springbootdemo.dao.RainfallMapper;
-import com.taosdata.jdbc.springbootdemo.dao.TableMapper;
+import com.taosdata.jdbc.springbootdemo.dao.tdengine.DatabaseMapper;
+import com.taosdata.jdbc.springbootdemo.dao.tdengine.RainfallMapper;
+import com.taosdata.jdbc.springbootdemo.dao.tdengine.TableMapper;
 import com.taosdata.jdbc.springbootdemo.domain.FieldMetadata;
 import com.taosdata.jdbc.springbootdemo.domain.Rainfall;
 import com.taosdata.jdbc.springbootdemo.domain.TableMetadata;

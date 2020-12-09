@@ -1,0 +1,42 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    tdengine-server:
+      driver-class-name: com.taosdata.jdbc.TSDBDriver
+      jdbc-url: jdbc:TAOS://k8s-master:6030/test?timezone=Asia/Beijing&charset=utf-8
+      username: root
+      password: taosdata
+      type: com.zaxxer.hikari.HikariDataSource      # Hikari连接池的设置
+      minimum-idle: 5                 #最小连接
+      maximum-pool-size: 15        #最大连接
+      auto-commit: true        #自动提交
+      idle-timeout: 30000        #最大空闲时常
+      pool-name: TDengineHikariCP        #连接池名
+      max-lifetime: 1800000        #最大生命周期
+      connection-timeout: 30000        #连接超时时间
+      connection-test-query: show tables
+
+
+    mysql-server:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://121.36.70.254:3306/ry_cloud?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+      username: root
+      password: 123456
+      type: com.zaxxer.hikari.HikariDataSource      # Hikari连接池的设置
+      minimum-idle: 5                 #最小连接
+      maximum-pool-size: 15        #最大连接
+      auto-commit: true        #自动提交
+      idle-timeout: 30000        #最大空闲时常
+      pool-name: DatebookHikariCP        #连接池名
+      max-lifetime: 1800000        #最大生命周期
+      connection-timeout: 30000        #连接超时时间
+
+#mybatis
+mybatis:
+  typeAliasesPackage: com.taosdata.jdbc.springbootdemo.domain
+  configuration:
+    #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl     #打印sql
+    call-setters-on-nulls: true  #设置查询字段为空时，也返回该字段
+    map-underscore-to-camel-case: true

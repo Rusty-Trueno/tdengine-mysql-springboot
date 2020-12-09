@@ -1,13 +1,15 @@
 package com.taosdata.jdbc.springbootdemo.service;
 
-import com.taosdata.jdbc.springbootdemo.dao.WeatherMapper;
+import com.taosdata.jdbc.springbootdemo.dao.tdengine.WeatherMapper;
 import com.taosdata.jdbc.springbootdemo.domain.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional(transactionManager = "tdengineTransactionManager")
 public class WeatherService {
 
     @Autowired

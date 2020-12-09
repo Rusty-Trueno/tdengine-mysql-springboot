@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.taosdata.jdbc.springbootdemo.dao.DatabaseMapper">
+<mapper namespace="com.taosdata.jdbc.springbootdemo.dao.tdengine.DatabaseMapper">
 
     <update id="createDatabase" parameterType="java.lang.String">
         create database if not exists ${dbname}

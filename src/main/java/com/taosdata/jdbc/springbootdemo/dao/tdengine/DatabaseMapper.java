@@ -1,4 +1,4 @@
-package com.taosdata.jdbc.springbootdemo.dao;
+package com.taosdata.jdbc.springbootdemo.dao.tdengine;
 
 import java.util.Map;
 
