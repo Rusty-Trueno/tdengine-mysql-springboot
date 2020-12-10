@@ -21,7 +21,7 @@ spring:
 
     mysql-server:
       driverClassName: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://121.36.70.254:3306/ry_cloud?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+      jdbc-url: jdbc:mysql://k8s-master:3306/ry_cloud?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
       username: root
       password: 123456
       type: com.zaxxer.hikari.HikariDataSource      # Hikari连接池的设置
